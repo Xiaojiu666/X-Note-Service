@@ -25,6 +25,6 @@ public class PlanServiceImpl implements PlanService {
 
     @Override
     public PlanDetails findPlan4Id(int planId) {
-        return null;
+        return planDao.findPlanById(planId);
     }
 }

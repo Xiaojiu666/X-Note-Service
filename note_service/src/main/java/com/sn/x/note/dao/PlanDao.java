@@ -15,7 +15,7 @@ public interface PlanDao {
             @Result(property = "planContent", column = "plan_content"),
             @Result(property = "planStatus", column = "plan_status"),
     })
-    PlanDetails findPlanById(@Param("planId") String planId);
+    PlanDetails findPlanById(@Param("planId") int planId);
 
 
     @Insert("INSERT INTO plan(plan_id,plan_name,plan_create_time,plan_remind_time,plan_content,plan_status) " +
