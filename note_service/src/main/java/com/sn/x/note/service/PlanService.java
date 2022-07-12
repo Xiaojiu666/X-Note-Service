@@ -3,6 +3,8 @@ package com.sn.x.note.service;
 
 import com.sn.x.note.domain.PlanDetails;
 
+import java.util.List;
+
 public interface PlanService {
 
     //
@@ -12,6 +14,9 @@ public interface PlanService {
 
     PlanDetails findPlan4Id(int planId);
 
+    List<PlanDetails> findPlans();
+
+     boolean upDatePlan(PlanDetails details);
 
 
 }

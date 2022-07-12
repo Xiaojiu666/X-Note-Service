@@ -6,6 +6,8 @@ import com.sn.x.note.service.PlanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PlanServiceImpl implements PlanService {
 
@@ -20,6 +22,7 @@ public class PlanServiceImpl implements PlanService {
 
     @Override
     public boolean deletePlan4Id(int planId) {
+        int i = planDao.deletePlan(planId);
         return false;
     }
 
@@ -27,4 +30,16 @@ public class PlanServiceImpl implements PlanService {
     public PlanDetails findPlan4Id(int planId) {
         return planDao.findPlanById(planId);
     }
+
+    @Override
+    public List<PlanDetails> findPlans() {
+        return planDao.findPlans();
+    }
+
+    @Override
+    public boolean upDatePlan(PlanDetails details) {
+        int i = planDao.updatePlan4Id(details);
+        return false;
+    }
+
 }

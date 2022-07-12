@@ -1,5 +1,6 @@
 package com.sn.x.note;
 
+import ch.qos.logback.classic.BasicConfigurator;
 import com.sn.x.note.domain.PlanDetails;
 import com.sn.x.note.service.impl.PlanServiceImpl;
 import org.junit.Test;
